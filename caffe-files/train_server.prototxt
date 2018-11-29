@@ -1,0 +1,21 @@
+
+net: "/data/jishen/MODN/caffe-files/train_densenet.prototxt"
+
+
+
+base_lr: 0.1
+display: 6536
+max_iter: 2000000
+    
+lr_policy: "step"
+stepsize:65360
+gamma: 0.5
+momentum: 0.9
+weight_decay: 0.0001
+clip_gradients: 0.01
+
+snapshot: 6536
+snapshot_prefix: "/data/jishen/MODN/model/densenet_model"
+solver_mode: GPU
+
+
