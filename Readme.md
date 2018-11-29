@@ -10,7 +10,7 @@ Dtype rate = GetLearningRate();
 const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 
 
-#Training:
+# Training:
    1. Preparing training/validation data using the files: generate_trainingset_x234/generate_testingset_x234 in "data" folder. "Train_291" folder contains 291 training images and "Set5" folder is a popular benchmark dataset.
    2. To train the model MODN_B4U25,  sh train_MODN_B4U25.sh
 
