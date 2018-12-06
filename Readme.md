@@ -17,7 +17,7 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
    
 # Testing:
   1. we deploy the models with matcaffe, compile "make matcaffe" before testing
-  2. We release the pretrained models:  MODN_B4U25 in "model" folder. To do testing on benchmark Set5. E.g., run file ./test/Densenet_sr_B4U25, the results are stored in "deply" folder, with both reconstructed images and PSNR/SSIM/IFCs in "test/B4U25.txt".
+  2. We release the pretrained model for MODN_25B in "model" folder. To do testing on benchmark Set5. E.g., run file ./test/Densenet_sr_B4U25, the results are stored in "deply" folder, with both reconstructed images and PSNR/SSIM/IFCs in "test/B4U25.txt".
 
 # Tips:
   The DenseBlock_layer proposed by Tongcheng didn't release allocated gpu memory during testing time, so the big size images can't be deployed in one matlab running time. We free the GPU allocation in the testing time in our proposed DenseBlock_layer.cu. To use DenseBlock_layer.cu, replace the "DenseBlock_layer.cu" in the "src/layers"  and "make all" (Noted only use this "DenseBlock_layer.cu" only works in testing time)
