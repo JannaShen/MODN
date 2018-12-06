@@ -1,3 +1,4 @@
+This repository for MODN in the following paper: https://www.researchgate.net/publication/328163866_Memory_optimized_Deep_Dense_Network_for_Image_Super-resolution
 # Caffe
  The caffe environment is from https://github.com/Tongcheng/caffe
   
@@ -21,3 +22,12 @@ const Dtype clip_gradients = this->param_.clip_gradients()/rate;
 
 # Tips:
   The DenseBlock_layer proposed by Tongcheng didn't release allocated gpu memory during testing time, so the big size images can't be deployed in one matlab running time. We free the GPU allocation in the testing time in our proposed DenseBlock_layer.cu. To use DenseBlock_layer.cu, replace the "DenseBlock_layer.cu" in the "src/layers"  and "make all" (Noted only use this "DenseBlock_layer.cu" only works in testing time)
+
+# Citation:
+if you find the code helpful in your research or work, please cite the following papers.
+
+@article{shen2018memory,
+  title={Memory optimized Deep Dense Network for Image Super-resolution},
+  author={Shen, Jialiang and Wang, Yucheng and Zhang, Jian},
+  year={2018}
+}
